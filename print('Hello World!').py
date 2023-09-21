@@ -16,10 +16,11 @@ class Animals:
 
 class Cat(Animals):
 
-    def say_someone():
+    def say_someone(self):
         return 'cat say meou'
     
 
 cat = Cat('Tom', 6, 'kot')
 
-print(cat.say_someone)
+print(cat.say_someone())
+print(cat.age)
