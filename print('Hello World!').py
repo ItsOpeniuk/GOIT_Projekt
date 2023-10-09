@@ -1,26 +1,23 @@
-name = 'Yevhen'
-age = 33
-if name and age >=18:
-    print('alles gut')
-else:
-    print('try again')
+a = float(input('Enter first num: '))
+b = float(input('Enter second num: '))
+operator = input('Enter operator: ')
 
-
-class Animals:
-
-    def __init__(self, name, age, rod) -> None:
-        self.name = name
-        self.age = age
-        self.rod = rod
-
-
-class Cat(Animals):
-
-    def say_someone(self):
-        return 'cat say meou'
-    
-
-cat = Cat('Tom', 6, 'kot')
-
-print(cat.say_someone())
-print(cat.age)
+if operator == '+':
+    result = a + b
+    print(f'resul {a} + {b} = {result}')
+elif operator == '-':
+    result = a - b
+    print(f'resul {a} - {b} = {result}')
+elif operator == '*':
+    result = a * b
+    print(f'resul {a} * {b} = {result}')
+elif operator == '/':
+    if b == 0:
+        print('ZeroDivisionError')
+    else:
+        result = a / b
+        print(f'resul {a} / {b} = {result}')
+elif operator != '+' or operator != '-' or operator != '*' or operator != '/':
+    print('Vrong operator')
+    operator = input('try agan: ')
+    exit(1)
